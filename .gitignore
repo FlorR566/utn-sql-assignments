@@ -1,0 +1,12 @@
+# Archivos compilados
+build/
+*.class
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+.env
