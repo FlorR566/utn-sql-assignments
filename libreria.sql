@@ -45,5 +45,41 @@ INSERT INTO libros(libro_id, titulo, autor_id)
 VALUES (20, 'La Casa de los Espíritus', 1);
 
 
-
 SELECT*FROM autores;
+SELECT*FROM libros;
+
+-- ----------------------------------------------------------------------------------------------
+-- Actividad práctica 6: 
+CREATE TABLE clientes(
+	cliente_id INT PRIMARY KEY,
+    nombre VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL
+);
+
+INSERT INTO clientes(cliente_id, nombre, email)
+VALUES (1, 'Juanita Perez', 'juanita@gmail.com');
+
+INSERT INTO clientes(cliente_id, nombre, email)
+VALUES (2, 'Pedro Picapiedra', 'picapiedra@gmail.com');
+
+INSERT INTO clientes(cliente_id, nombre, email)
+VALUES (3, 'Lidia Dominguez', 'lidia@hotmail.com');
+
+INSERT INTO clientes(cliente_id, nombre, email)
+VALUES (4, 'Simon Martini', 'simon@hotmail.com');
+
+INSERT INTO clientes(cliente_id, nombre, email)
+VALUES (5, 'Lima Limones', 'lima@gmail.com');
+
+
+SELECT*FROM clientes;
+
+-- 6) buscar los mails terminados en '@gmail.com':
+SELECT*FROM clientes
+WHERE email LIKE '%@gmail.com';
+
+
+
+
+
+

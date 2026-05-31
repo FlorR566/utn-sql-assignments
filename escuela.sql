@@ -44,3 +44,9 @@ SELECT nombre_alumno FROM alumnos
 WHERE edad= 22;
 
 SELECT*FROM alumnos;
+
+-- modificar edad 
+UPDATE alumnos SET nombre_alumno = 'Juan Manuel Lopez', edad = 23
+WHERE id_alumno = 1;
+
+SELECT*FROM alumnos;
