@@ -96,3 +96,5 @@ select*from autoresConLibros;
 
 -- ELIMINAR una VISTA
 DROP VIEW IF EXISTS autoresConLibros;
+
+
