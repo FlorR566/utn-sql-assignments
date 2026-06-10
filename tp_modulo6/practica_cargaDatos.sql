@@ -38,11 +38,16 @@ SELECT*FROM Clientes;
 -- Insertamos datos dentro de la tabla Facturas
 INSERT INTO Facturas  (numero_factura, fecha, numero_cliente) 
 VALUES
-(335, '01.08.24', 21),
+(335, '01.08.24', 21),           -- guarda, acá las fechas están mal (PRIMERO VA EL AÑO, LUEGO EL MES Y LUEGO EL DIA --> 2024.08.01)
 (336, '02.08.24', 22),
 (337, '02.08.24', 23);
 
 SELECT*FROM Facturas;
+
+
+UPDATE Facturas SET fecha='2024.08.01'  Where numero_factura= 335;
+UPDATE Facturas SET fecha='2024.08.02'  Where numero_factura= 336;
+UPDATE Facturas SET fecha='2024.08.02'  Where numero_factura= 337;
 
 
 -- Insertamos datos dentro de la tabla Detalle_Factura
@@ -82,8 +87,9 @@ SHOW INDEX FROM Detalle_Factura;
 
 
 -- Consulta SQL para mostrar aquellos clientes que realizaron compras el 02/08/2024
-SELECT c.numero_cliente, c.apellido_cliente, c.nombre_cliente, f.numero_factura, f.fecha -- notar que de cada tabla tomo solo las columnas que creo necesarios mostrar
+SELECT c.numero_cliente, c.apellido_cliente, c.nombre_cliente, f.numero_factura, f.fecha -- notar que de cada tabla tomo solo las columnas que creo necesarias mostrar
 FROM Clientes c
-JOIN Facturas f ON c.numero
+JOIN Facturas f ON c.numero_cliente = f.numero_cliente
+WHERE f.fecha = '2024-08-02';
 
 
